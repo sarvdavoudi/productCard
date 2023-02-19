@@ -1,0 +1,71 @@
+@charset "UTF-8";
+* {
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  /*چون ستونی شده پس محور ایکس و ایگرگ برعکس میشود */
+  background-color: hsl(30deg, 38%, 92%);
+}
+
+.card {
+  font-family: "Montserrat", sans-serif;
+  color: rgb(128, 128, 128);
+  font-size: 14px;
+  width: 400px;
+  height: 650px;
+  border-radius: 12px 12px 12px 12px;
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
+  background-color: hsl(0deg, 0%, 100%);
+  margin: 23px;
+}
+
+.card__img img {
+  width: 100%;
+  border-radius: 12px 12px 0 0;
+}
+
+.card__info {
+  margin: 20px;
+}
+
+.card__title_lite {
+  letter-spacing: 7px;
+}
+
+.card__title_full {
+  font-family: "Fraunces", serif;
+  color: black;
+  font-size: 38px;
+  margin: 20px 0;
+}
+
+.card__prices {
+  display: flex;
+  align-items: center;
+  margin: 20px 0px;
+}
+
+.card__new-price {
+  font-family: "Fraunces", serif;
+  font-size: 30px;
+  color: hsl(158deg, 36%, 37%);
+  margin: 0px 20px 0 0;
+}
+
+.card__old-price {
+  text-decoration: line-through;
+}
+
+.btn__primary {
+  background-color: hsl(158deg, 36%, 37%);
+  border-radius: 6px;
+  width: 350px;
+  height: 50px;
+  font-size: 20px;
+  color: hsl(0deg, 0%, 100%);
+  border-style: none;
+}/*# sourceMappingURL=style.css.map */
