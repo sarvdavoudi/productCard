@@ -3,95 +3,85 @@
 @import "./variables.scss";
 
 * {
-    box-sizing: border-box;
+  box-sizing: border-box;
 }
 
-@mixin flex($direction,$justify,$align){
-    display: flex;
-    flex-direction: $direction;
-    justify-content: $justify;
-    align-items: $align;
+@mixin flex($direction, $justify, $align) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align;
 }
 
-
-// برای دیباگ کردن در صورت لزوم، یک کادر دور هر المنت ایجاد خواهیم کرد
+// We will create a border around each element for debugging if necessary
 @mixin debugger {
-    border: 3px solid black;
+  border: 3px solid black;
 }
-
 
 body {
-    @include flex( column, null , center); /*چون ستونی شده پس محور ایکس و ایگرگ برعکس میشود */
-    background-color: $theme_screen_background_color;
+  @include flex(column, null, center); /*Because it is columnar,then the X and Y axis are reversed */
+  background-color: $theme_screen_background_color;
 }
 
 .card {
-    font-family: $theme_text_font;
-    color:$theme_text_color;
-    font-size: 14px;
-    width: 400px;
-    height: 650px;
-    // @include flex(column,null ,center );
-    border-radius: 12px 12px 12px 12px;
-    box-shadow: $theme_box_shadow;
-    background-color: $theme_card_background_color;
-    margin: 23px;
+  font-family: $theme_text_font;
+  color: $theme_text_color;
+  font-size: 14px;
+  width: 400px;
+  height: 650px;
+  // @include flex(column,null ,center );
+  border-radius: 12px 12px 12px 12px;
+  box-shadow: $theme_box_shadow;
+  background-color: $theme_card_background_color;
+  margin: 23px;
 
-    // .card__img
-    &__img{
-        img {
-            width: 100%;
-            border-radius: 12px 12px 0 0;
-        }
-    } 
-    
-    // .card__info
-    &__info {
-        margin: 20px;
-    
-        
-        .card__title_lite {
-            letter-spacing: 7px;
-        
-        }
-        
-        
-        .card__title_full {
-            font-family: $theme_title_font;
-            color: $theme_title_color;
-            font-size: 38px;
-            margin: 20px 0;
-        
-        
-        }
-        
-        .card__prices {
-            @include flex(null,null ,center );
-            margin: 20px 0px;
-        
-            .card__new-price {
-                font-family: $theme_price_font;
-                font-size: 30px;
-                color:$theme_color_green;
-                margin: 0px 20px 0 0;
-            
-            }
-            
-            .card__old-price {
-                text-decoration: line-through;
-            }
-        }
-        
-        
-        .btn__primary {
-        
-            background-color:$theme_color_green;
-            border-radius: 6px;
-            width: 350px;
-            height: 50px;
-            font-size: 20px;
-            color:$theme_color_white;
-            border-style: none;
-        }
+  // .card__img
+  &__img {
+    img {
+      width: 100%;
+      border-radius: 12px 12px 0 0;
     }
+  }
+
+  // .card__info
+  &__info {
+    margin: 20px;
+
+    .card__title_lite {
+      letter-spacing: 7px;
+    }
+
+    .card__title_full {
+      font-family: $theme_title_font;
+      color: $theme_title_color;
+      font-size: 38px;
+      margin: 20px 0;
+    }
+
+    .card__prices {
+      @include flex(null, null, center);
+      margin: 20px 0px;
+
+      .card__new-price {
+        font-family: $theme_price_font;
+        font-size: 30px;
+        color: $theme_color_green;
+        margin: 0px 20px 0 0;
+      }
+
+      .card__old-price {
+        text-decoration: line-through;
+      }
+    }
+
+    .btn__primary {
+      background-color: $theme_color_green;
+      border-radius: 6px;
+      width: 350px;
+      height: 50px;
+      font-size: 20px;
+      color: $theme_color_white;
+      border-style: none;
+    }
+  }
 }
